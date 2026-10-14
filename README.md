@@ -1,1 +1,331 @@
-# BLESSTAMP3D
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bles Stamp 3D | Figuras Coleccionables de Alta Precisión</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            teal: '#00B4A2',
+                            tealHover: '#009687',
+                            darkBg: '#12161A',
+                            cardBg: '#181C20',
+                            cardBorder: '#282F37',
+                            accent: '#FFB800'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0d0f;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(0, 180, 162, 0.12) 0%, transparent 60%),
+                linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+                url('https://placehold.co/1920x1080/1a1a24/2d2d3a?text=Collector+Display+Shelf+Background');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .floating-card {
+            background: linear-gradient(165deg, rgba(24, 28, 32, 0.95) 0%, rgba(18, 22, 26, 0.98) 100%);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75), 0 0 30px rgba(0, 180, 162, 0.1);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #12161A;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #00B4A2;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="text-gray-200 min-h-screen py-4 md:py-10 px-2 sm:px-4 md:px-6 flex justify-center items-center custom-scrollbar">
+
+    <main class="w-full max-w-4xl floating-card border border-brand-cardBorder rounded-2xl md:rounded-3xl overflow-hidden relative my-auto">
+        
+        <!-- Header / Navigation -->
+        <header class="flex justify-between items-center px-6 py-4 md:py-5 border-b border-brand-cardBorder/80 bg-black/20">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-teal/20 border border-brand-teal/40 flex items-center justify-center text-brand-teal font-extrabold text-xl shadow-inner">
+                    BS
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg md:text-xl text-white tracking-wider">BLES STAMP 3D</h1>
+                    <p class="text-[11px] text-gray-400">Figuras Coleccionables Uruguay</p>
+                </div>
+            </div>
+            <a href="#catalogo" class="hidden sm:flex items-center gap-2 bg-brand-teal hover:bg-brand-tealHover text-gray-950 px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-md shadow-brand-teal/20">
+                <span>Ver Catálogo</span>
+                <i class="fa-solid fa-arrow-down text-xs"></i>
+            </a>
+        </header>
+
+        <div class="p-5 md:p-8 space-y-10">
+
+            <!-- Hero Section -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+                <!-- Left Column -->
+                <div class="space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-teal/10 border border-brand-teal/30 text-brand-teal text-xs font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
+                        Impresión 3D Bambu Lab P1S
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight">
+                        Figuras de Colección en <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-emerald-400">PLA Puro</span>, Sin Pintar
+                    </h2>
+                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                        Modelos despiezados e interactivos ensamblados con piezas independientes por color puro de fábrica. Acabado limpio, precisión milimétrica y cero desperdicio de pintura.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-3">
+                        <a href="#catalogo" class="bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-5 py-2.5 rounded-xl transition text-xs sm:text-sm shadow-md shadow-brand-teal/20">
+                            Explorar Colección
+                        </a>
+                        <a href="https://wa.me/59800000000?text=Hola!%20Me%20interesa%20consultar%20por%20las%20figuras%203D" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white font-medium px-4 py-2.5 rounded-xl border border-gray-700 transition text-xs sm:text-sm flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+                            Consultar WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column Image -->
+                <div class="relative group flex justify-center">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-teal to-emerald-500 rounded-2xl blur opacity-20 group-hover:opacity-35 transition duration-500"></div>
+                    <div class="relative w-full rounded-2xl bg-black/40 border border-brand-cardBorder overflow-hidden p-4 flex flex-col items-center">
+                        <img src="https://placehold.co/400x400/181C20/00B4A2?text=Sudadera+Roja+3D" alt="Figura Destacada Bles Stamp 3D" class="w-full h-56 sm:h-64 object-contain rounded-xl transform group-hover:scale-105 transition duration-500">
+                        <div class="w-full mt-3 flex justify-between items-center text-xs text-gray-400 px-1">
+                            <span class="font-medium text-gray-300"><i class="fa-solid fa-cube text-brand-teal mr-1"></i> Ensamble por piezas</span>
+                            <span class="bg-brand-cardBg text-gray-300 px-2 py-0.5 rounded border border-gray-700 text-[11px]">PLA Sunlu Premium</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Value Proposition Section -->
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-brand-cardBg/90 p-4 sm:p-5 rounded-2xl border border-brand-cardBorder text-center flex flex-col items-center hover:border-brand-teal/40 transition">
+                    <div class="w-10 h-10 rounded-xl bg-brand-teal/10 flex items-center justify-center text-brand-teal mb-2">
+                        <i class="fa-solid fa-palette text-lg"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-sm mb-1">Colores Puros</h3>
+                    <p class="text-gray-400 text-xs">Filamentos Sunlu (Basic, Matte y Silk) de fábrica para lograr acabados vibrantes, duraderos y sin decoloración.</p>
+                </div>
+
+                <div class="bg-brand-cardBg/90 p-4 sm:p-5 rounded-2xl border border-brand-cardBorder text-center flex flex-col items-center hover:border-brand-teal/40 transition">
+                    <div class="w-10 h-10 rounded-xl bg-brand-teal/10 flex items-center justify-center text-brand-teal mb-2">
+                        <i class="fa-solid fa-puzzle-piece text-lg"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-sm mb-1">Ensamble Perfecto</h3>
+                    <p class="text-gray-400 text-xs">Diseño despiezado e interactivo con conectores mecánicos exactos. Encaje limpio sin retoques químicos.</p>
+                </div>
+
+                <div class="bg-brand-cardBg/90 p-4 sm:p-5 rounded-2xl border border-brand-cardBorder text-center flex flex-col items-center hover:border-brand-teal/40 transition">
+                    <div class="w-10 h-10 rounded-xl bg-brand-teal/10 flex items-center justify-center text-brand-teal mb-2">
+                        <i class="fa-solid fa-truck-fast text-lg"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-sm mb-1">Envíos Nacionales</h3>
+                    <p class="text-gray-400 text-xs">Despachamos tu pedido embalado con la máxima seguridad a cualquier rincón de Uruguay vía DAC o Mirtrans.</p>
+                </div>
+            </section>
+
+            <!-- Featured Catalog Section -->
+            <section id="catalogo" class="space-y-5 pt-2">
+                <div class="border-b border-brand-cardBorder pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+                    <div>
+                        <h2 class="text-xl font-extrabold text-white">Catálogo Destacado</h2>
+                        <p class="text-xs text-gray-400">Colección inicial de lanzamiento lista para encargar</p>
+                    </div>
+                    <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-0.5 rounded-full font-medium self-start sm:self-auto">
+                        <i class="fa-solid fa-check text-xs mr-1"></i> Stock de filamentos listo
+                    </span>
+                </div>
+
+                <!-- Product Grid (2x2) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    
+                    <!-- Product 1 -->
+                    <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder p-4 flex flex-col justify-between hover:border-brand-teal/50 transition">
+                        <div>
+                            <div class="relative bg-black/40 rounded-xl p-3 mb-3 flex justify-center items-center h-44 border border-white/5">
+                                <span class="absolute top-2 right-2 bg-brand-darkBg/90 text-gray-300 text-[10px] px-2 py-0.5 rounded-md border border-gray-700">18 cm</span>
+                                <img src="https://placehold.co/300x300/181C20/00B4A2?text=Scooby-Doo+Streetwear" alt="Scooby-Doo Streetwear" class="h-full object-contain hover:scale-105 transition">
+                            </div>
+                            <h3 class="text-white font-bold text-base">Scooby-Doo Streetwear</h3>
+                            <p class="text-gray-400 text-xs mt-0.5">Acabado Matte y Silk | Ensamble de 12 piezas</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-brand-cardBorder flex items-center justify-between">
+                            <div>
+                                <span class="text-[10px] text-gray-400 block">Precio</span>
+                                <span class="text-brand-teal font-extrabold text-base">$U 1.250</span>
+                            </div>
+                            <a href="https://wa.me/59800000000?text=Hola!%20Me%20interesa%20comprar%20la%20figura%20de%20Scooby-Doo%20Streetwear%20($U%201.250)" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 transition">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                Pedir
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder p-4 flex flex-col justify-between hover:border-brand-teal/50 transition">
+                        <div>
+                            <div class="relative bg-black/40 rounded-xl p-3 mb-3 flex justify-center items-center h-44 border border-white/5">
+                                <span class="absolute top-2 right-2 bg-brand-darkBg/90 text-gray-300 text-[10px] px-2 py-0.5 rounded-md border border-gray-700">17 cm</span>
+                                <img src="https://placehold.co/300x300/181C20/00B4A2?text=Mario+Bros+Hoodie" alt="Mario Bros Urban Hoodie" class="h-full object-contain hover:scale-105 transition">
+                            </div>
+                            <h3 class="text-white font-bold text-base">Mario Bros Urban Hoodie</h3>
+                            <p class="text-gray-400 text-xs mt-0.5">Colores puros rojo, azul y blanco estilo urbano</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-brand-cardBorder flex items-center justify-between">
+                            <div>
+                                <span class="text-[10px] text-gray-400 block">Precio</span>
+                                <span class="text-brand-teal font-extrabold text-base">$U 1.200</span>
+                            </div>
+                            <a href="https://wa.me/59800000000?text=Hola!%20Me%20interesa%20comprar%20la%20figura%20de%20Mario%20Bros%20Urban%20Hoodie%20($U%201.200)" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 transition">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                Pedir
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder p-4 flex flex-col justify-between hover:border-brand-teal/50 transition">
+                        <div>
+                            <div class="relative bg-black/40 rounded-xl p-3 mb-3 flex justify-center items-center h-44 border border-white/5">
+                                <span class="absolute top-2 right-2 bg-brand-darkBg/90 text-gray-300 text-[10px] px-2 py-0.5 rounded-md border border-gray-700">20 cm</span>
+                                <img src="https://placehold.co/300x300/181C20/00B4A2?text=Goku+Street+Style" alt="Goku Casual Street Style" class="h-full object-contain hover:scale-105 transition">
+                            </div>
+                            <h3 class="text-white font-bold text-base">Goku Casual Street Style</h3>
+                            <p class="text-gray-400 text-xs mt-0.5">Detalle de alta escala y encastres reforzados</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-brand-cardBorder flex items-center justify-between">
+                            <div>
+                                <span class="text-[10px] text-gray-400 block">Precio</span>
+                                <span class="text-brand-teal font-extrabold text-base">$U 1.400</span>
+                            </div>
+                            <a href="https://wa.me/59800000000?text=Hola!%20Me%20interesa%20comprar%20la%20figura%20de%20Goku%20Casual%20Street%20Style%20($U%201.400)" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 transition">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                Pedir
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder p-4 flex flex-col justify-between hover:border-brand-teal/50 transition">
+                        <div>
+                            <div class="relative bg-black/40 rounded-xl p-3 mb-3 flex justify-center items-center h-44 border border-white/5">
+                                <span class="absolute top-2 right-2 bg-brand-darkBg/90 text-gray-300 text-[10px] px-2 py-0.5 rounded-md border border-gray-700">15 cm</span>
+                                <img src="https://placehold.co/300x300/181C20/00B4A2?text=Merlina+Addams+Chibi" alt="Merlina Addams Chibi" class="h-full object-contain hover:scale-105 transition">
+                            </div>
+                            <h3 class="text-white font-bold text-base">Merlina Addams Chibi</h3>
+                            <p class="text-gray-400 text-xs mt-0.5">Estilo minimalista en tonos oscuros mate</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-brand-cardBorder flex items-center justify-between">
+                            <div>
+                                <span class="text-[10px] text-gray-400 block">Precio</span>
+                                <span class="text-brand-teal font-extrabold text-base">$U 990</span>
+                            </div>
+                            <a href="https://wa.me/59800000000?text=Hola!%20Me%20interesa%20comprar%20la%20figura%20de%20Merlina%20Addams%20Chibi%20($U%20990)" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 transition">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                Pedir
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Extended Catalog Banner -->
+            <section class="relative rounded-2xl bg-gradient-to-r from-brand-cardBg via-gray-900 to-brand-cardBg border border-brand-teal/30 p-5 md:p-6 overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-teal/10 rounded-full blur-2xl"></div>
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4 relative z-10">
+                    <div class="space-y-1 text-center md:text-left">
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-teal">Catálogo Extendido</span>
+                        <h3 class="text-lg md:text-xl font-extrabold text-white">¿Buscas otro personaje o anime?</h3>
+                        <p class="text-gray-300 text-xs max-w-lg">
+                            Contamos con una librería de más de <strong>200 modelos de diseñadores prémium</strong> 100% despiezados y listos para fabricar.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/59800000000?text=Hola!%20Quisiera%20consultar%20por%20un%20personaje%20especifico%20del%20catalogo%20extendido" target="_blank" class="whitespace-nowrap bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-5 py-2.5 rounded-xl transition text-xs flex items-center gap-2 shadow-md shadow-brand-teal/20">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                        Consultar Personaje
+                    </a>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="space-y-3 pt-2">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-circle-question text-brand-teal"></i>
+                    Preguntas frecuentes
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                    <div class="bg-brand-cardBg p-4 rounded-xl border border-brand-cardBorder space-y-1">
+                        <h4 class="font-bold text-white text-sm">⏱️ Tiempos de Fabricación</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            El proceso de impresión y ensamble toma de <strong>3 a 5 días hábiles</strong> antes del despacho.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-cardBg p-4 rounded-xl border border-brand-cardBorder space-y-1">
+                        <h4 class="font-bold text-white text-sm">💳 Medios de Pago</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            Aceptamos <strong>Mercado Pago</strong>, transferencias bancarias (<strong>Itaú / BROU</strong>) y redes de cobranza (<strong>Abitab / Redpagos</strong>).
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-cardBg p-4 rounded-xl border border-brand-cardBorder space-y-1">
+                        <h4 class="font-bold text-white text-sm">📦 Envíos a todo el país</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            Despachamos por <strong>DAC o Mirtrans</strong> con pago de flete en destino y empaque antigolpes.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="border-t border-brand-cardBorder px-6 py-4 bg-black/40 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+            <div>
+                <span>Bles Stamp 3D © 2026. Hecho en Uruguay.</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://instagram.com" target="_blank" class="hover:text-brand-teal transition"><i class="fa-brands fa-instagram text-base"></i></a>
+                <a href="https://wa.me/59800000000" target="_blank" class="hover:text-emerald-400 transition"><i class="fa-brands fa-whatsapp text-base"></i></a>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
