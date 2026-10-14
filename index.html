@@ -74,7 +74,7 @@
 
     <main class="w-full max-w-5xl floating-card border border-brand-cardBorder rounded-2xl md:rounded-3xl overflow-hidden relative my-auto">
         
-        <!-- Header / Navigation -->
+        <!-- Header / Navigation (Botones removidos y reemplazados por Badge Animado) -->
         <header class="flex justify-between items-center px-6 py-4 md:py-5 border-b border-brand-cardBorder/80 bg-black/20">
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-xl bg-brand-teal/20 border border-brand-teal/40 flex items-center justify-center text-brand-teal font-extrabold text-xl shadow-inner">
@@ -85,15 +85,15 @@
                     <p class="text-[11px] text-gray-400">Impresión 3D & Personalizados en Uruguay</p>
                 </div>
             </div>
-            <div class="flex items-center gap-2">
-                <a href="#taller-estampados" class="hidden sm:flex items-center gap-1.5 bg-orange-600/20 hover:bg-orange-600/30 text-orange-400 border border-orange-500/40 px-3 py-1.5 rounded-xl text-xs font-bold transition">
-                    <i class="fa-solid fa-shirt text-xs"></i>
-                    <span>Taller Estampados</span>
-                </a>
-                <a href="#catalogo" class="hidden sm:flex items-center gap-2 bg-brand-teal hover:bg-brand-tealHover text-gray-950 px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-md shadow-brand-teal/20">
-                    <span>Ver Catálogo</span>
-                    <i class="fa-solid fa-arrow-down text-xs"></i>
-                </a>
+            
+            <!-- Badge Animado / Estado del Taller -->
+            <div class="flex items-center gap-2 bg-brand-darkBg/80 px-3 py-1.5 rounded-xl border border-brand-teal/30 text-xs font-semibold shadow-inner">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-teal opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-teal"></span>
+                </span>
+                <i class="fa-solid fa-cube text-brand-teal animate-bounce"></i>
+                <span class="text-gray-300 text-[11px] hidden sm:inline">Bambu Lab P1S <strong class="text-brand-teal">Online</strong></span>
             </div>
         </header>
 
