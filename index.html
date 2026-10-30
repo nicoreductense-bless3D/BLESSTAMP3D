@@ -22,11 +22,12 @@
         main { max-width: 1200px; margin: 0 auto; }
         
         /* Header */
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid var(--border); margin-bottom: 40px; flex-wrap: wrap; gap: 15px; }
         .brand { display: flex; align-items: center; gap: 15px; }
         .logo-box { background: var(--accent); color: #fff; font-weight: 700; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 1.2rem; }
         h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: 0.5px; }
         header p { font-size: 0.85rem; color: var(--text-muted); }
+        .header-actions { display: flex; align-items: center; gap: 15px; }
         .status-badge { background: var(--bg-card); border: 1px solid var(--border); padding: 8px 15px; border-radius: 20px; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; }
         .dot { width: 8px; height: 8px; background-color: #10B981; border-radius: 50%; box-shadow: 0 0 8px #10B981; }
 
@@ -45,10 +46,30 @@
         .hero-img-box img { width: 100%; height: 320px; object-fit: cover; display: block; }
         .hero-img-badge { position: absolute; bottom: 15px; left: 15px; right: 15px; background: rgba(18, 21, 24, 0.85); backdrop-filter: blur(5px); padding: 10px; border-radius: 8px; display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; border: 1px solid var(--border); }
 
-        /* Taller Banner */
-        .taller-banner { background: linear-gradient(135deg, var(--bg-card), #16222A); border: 1px solid var(--border); border-radius: 16px; padding: 40px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+        /* Features / Envíos Grid */
+        .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
+        .feature-card { background: var(--bg-card); border: 1px solid var(--border); padding: 25px; border-radius: 12px; }
+        .feature-card h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--text-main); }
+        .feature-card p { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* Taller Banner (Con fondo visual recuperado) */
+        .taller-banner { 
+            background: linear-gradient(135deg, rgba(27, 32, 38, 0.92), rgba(22, 34, 42, 0.96)), url('Imagen generada por Gemini_nm4kzbnm4kzbnm4k.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            border: 1px solid var(--border); 
+            border-radius: 16px; 
+            padding: 40px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 40px; 
+            flex-wrap: wrap;
+            gap: 20px;
+        }
         .taller-content h3 { font-size: 1.5rem; margin-bottom: 10px; }
         .taller-content p { color: var(--text-muted); max-width: 600px; margin-bottom: 0; }
+        .taller-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
         /* Catalog / Sectors */
         .category-section { margin-bottom: 50px; }
@@ -62,10 +83,16 @@
         .product-body p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; }
         .product-footer { padding: 15px 20px; background: rgba(0,0,0,0.2); border-top: 1px solid var(--border); display: flex; justify-content: flex-end; align-items: center; }
 
+        /* Footer / Contacto */
+        footer { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 30px; margin-top: 60px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        footer p { font-size: 0.85rem; color: var(--text-muted); }
+        .footer-links { display: flex; gap: 15px; }
+
         /* Responsive */
         @media(max-width: 900px) {
-            .hero, .catalog-grid, .taller-banner { grid-template-columns: 1fr; }
-            .taller-banner { flex-direction: column; align-items: flex-start; gap: 20px; }
+            .hero, .features, .catalog-grid, .taller-banner { grid-template-columns: 1fr; }
+            .taller-banner { flex-direction: column; align-items: flex-start; }
+            footer { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -80,9 +107,12 @@
                     <p>Impresión 3D & Personalizados en Uruguay</p>
                 </div>
             </div>
-            <div class="status-badge">
-                <span class="dot"></span>
-                <span>Bambu Lab P1S <strong>Online</strong></span>
+            <div class="header-actions">
+                <a href="https://wa.me/59894103512" target="_blank" class="btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;">WhatsApp 3D</a>
+                <div class="status-badge">
+                    <span class="dot"></span>
+                    <span>Bambu Lab P1S <strong>Online</strong></span>
+                </div>
             </div>
         </header>
 
@@ -96,7 +126,7 @@
                 </p>
                 <div class="hero-buttons">
                     <a href="https://wa.me/59894103512?text=Hola!%20Quiero%20pedir%20o%20cotizar%20el%20Kit%20de%20Cocina%20Sensorial" target="_blank" class="btn-primary">
-                        Pedir / Cotizar
+                        Pedir / Cotizar por WhatsApp
                     </a>
                     <a href="#catalogo" class="btn-secondary">Ver Catálogo</a>
                 </div>
@@ -112,14 +142,30 @@
             </div>
         </section>
 
-        <!-- Taller Banner -->
+        <!-- Features / Envíos Section -->
+        <section class="features">
+            <div class="feature-card">
+                <h3>Variedad de Categorías</h3>
+                <p>Desde kits educativos y figuras hasta llaveros y utilidades para el hogar.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Colores Puros & Lavables</h3>
+                <p>Piezas impresas en materiales premium de alta calidad con acabados impecables.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Envíos a todo Uruguay</h3>
+                <p>Despachamos tu pedido por DAC o la agencia de tu preferencia a todo el país.</p>
+            </div>
+        </section>
+
+        <!-- Taller Banner (Con enlaces de contacto para Taller) -->
         <section class="taller-banner">
             <div class="taller-content">
                 <h3>¿Buscas Tazas, Remeras en DTF o Merchandising?</h3>
                 <p>Contamos con taller propio de sublimación y estampados rígidos para regalos corporativos y eventos en todo Uruguay.</p>
             </div>
-            <div>
-                <a href="https://wa.me/59894816771?text=Hola!%20Quiero%20consultar%20por%20los%20estampados%20y%20personalizados" target="_blank" class="btn-primary">Consultar Taller</a>
+            <div class="taller-actions">
+                <a href="https://wa.me/59894816771?text=Hola!%20Quiero%20consultar%20por%20los%20estampados%20y%20personalizados" target="_blank" class="btn-primary">WhatsApp Taller</a>
             </div>
         </section>
 
@@ -197,7 +243,7 @@
                 <div class="catalog-grid">
                     <div class="product-card">
                         <div>
-                            <a href="Macetas decorativas 3D.jpg" target="_blank"><img src="Macetas decorativas 3D.jpg" alt="Macetas decorativas 3D" class="product-img" onerror="this.src='https://placehold.co/400x280/1B2026/00B4A2?text=Macetas+decorativas+3D'"></a>
+                            <a href="Macetas decorativas 3d.jpg" target="_blank"><img src="Macetas decorativas 3d.jpg" alt="Macetas decorativas 3D" class="product-img" onerror="this.src='https://placehold.co/400x280/1B2026/00B4A2?text=Macetas+decorativas+3D'"></a>
                             <div class="product-body">
                                 <h3>Macetas Decorativas 3D</h3>
                                 <p>Dale vida a tus espacios con diseños modernos y geométricos ideales para plantas pequeñas y suculentas.</p>
@@ -229,7 +275,7 @@
                 <div class="catalog-grid">
                     <div class="product-card">
                         <div>
-                            <a href="Árboles navideños impresos en 3D.jpg" target="_blank"><img src="Árboles navideños impresos en 3D.jpg" alt="Árboles navideños impresos en 3D" class="product-img" onerror="this.src='https://placehold.co/400x280/1B2026/00B4A2?text=Arboles+navidenos+3D'"></a>
+                            <a href="Árboles navideños 3d.jpg" target="_blank"><img src="Árboles navideños 3d.jpg" alt="Árboles navideños 3D" class="product-img" onerror="this.src='https://placehold.co/400x280/1B2026/00B4A2?text=Arboles+navidenos+3D'"></a>
                             <div class="product-body">
                                 <h3>Árboles Navideños Impresos en 3D</h3>
                                 <p>Originales adornos y árboles decorativos con texturas únicas para darle un toque especial a tus fiestas.</p>
@@ -255,6 +301,18 @@
                 </div>
             </section>
         </div>
+
+        <!-- Footer -->
+        <footer>
+            <div>
+                <strong style="color: var(--accent);">BLESSTAMP 3D</strong>
+                <p>© 2026 Impresión 3D & Estampados Personalizados - Uruguay</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://wa.me/59894103512" target="_blank" class="btn-secondary" style="font-size: 0.85rem; padding: 8px 14px;">WhatsApp 3D</a>
+                <a href="https://wa.me/59894816771" target="_blank" class="btn-secondary" style="font-size: 0.85rem; padding: 8px 14px;">WhatsApp Taller</a>
+            </div>
+        </footer>
     </main>
 </body>
 </html>
