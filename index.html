@@ -24,7 +24,7 @@
                     colors: {
                         brand: {
                             teal: '#00B4A2',
-                            tealHover: '#009687',
+                            tealHover: '#009688',
                             darkBg: '#0F1215',
                             cardBg: '#181C20',
                             cardBorder: '#282F37',
@@ -42,10 +42,10 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0b0d0f;
+            background-color: #0c0f12;
             background-image: 
-                radial-gradient(circle at 50% 0%, rgba(0, 180, 162, 0.12) 0%, transparent 60%),
-                linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+                radial-gradient(circle at 50% 0%, rgba(0, 180, 162, 0.15) 0%, transparent 60%),
+                linear-gradient(rgba(12, 15, 18, 0.85), rgba(12, 15, 18, 0.92)),
                 url('Imagen%20generada%20por%20Gemini_nm4kzbnm4kzbnm4k.jpg');
             background-size: cover;
             background-position: center;
@@ -88,6 +88,9 @@
             
             <!-- Actions & Status Badge -->
             <div class="flex items-center gap-3">
+                <a href="#mini-tour" class="hidden sm:flex items-center gap-1.5 bg-brand-cardBg hover:bg-gray-800 text-brand-teal border border-brand-teal/30 px-3 py-1.5 rounded-xl text-xs font-semibold transition">
+                    <i class="fa-solid fa-graduation-cap"></i> Tour 3D
+                </a>
                 <a href="https://wa.me/59894103512" target="_blank" class="hidden sm:flex items-center gap-2 bg-brand-cardBg hover:bg-gray-800 text-gray-200 border border-brand-cardBorder px-3.5 py-1.5 rounded-xl text-xs font-medium transition">
                     <i class="fa-brands fa-whatsapp text-brand-teal"></i> WhatsApp 3D
                 </a>
@@ -131,11 +134,11 @@
                 <!-- Right Column Image -->
                 <div class="relative group flex justify-center">
                     <div class="absolute -inset-1 bg-gradient-to-r from-brand-teal via-emerald-500 to-amber-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-500"></div>
-                    <div class="relative w-full rounded-2xl bg-black/40 border border-brand-cardBorder overflow-hidden p-4 flex flex-col items-center">
-                        <a href="Kit%20sensorial.jpg" target="_blank" class="w-full overflow-hidden rounded-xl">
-                            <img src="Kit%20sensorial.jpg" alt="Kit Sensorial Didáctico" onerror="this.src='https://placehold.co/400x280/181C20/00B4A2?text=Kit+Sensorial'" class="w-full h-56 sm:h-64 object-cover rounded-xl transform group-hover:scale-105 transition duration-500">
+                    <div class="relative w-full rounded-2xl bg-black/40 border border-brand-cardBorder overflow-hidden flex flex-col items-center">
+                        <a href="Kit%20sensorial.jpg" target="_blank" class="w-full overflow-hidden">
+                            <img src="Kit%20sensorial.jpg" alt="Kit Sensorial Didáctico" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Kit+Sensorial'" class="w-full h-64 sm:h-72 object-cover transform group-hover:scale-105 transition duration-500">
                         </a>
-                        <div class="w-full mt-3 flex justify-between items-center text-xs text-gray-400 px-1">
+                        <div class="w-full p-3 bg-brand-darkBg/90 flex justify-between items-center text-xs text-gray-400 border-t border-brand-cardBorder">
                             <span class="font-medium text-gray-300"><i class="fa-solid fa-child text-brand-teal mr-1"></i> Estimulación Temprana</span>
                             <span class="bg-brand-cardBg text-gray-300 px-2 py-0.5 rounded border border-gray-700 text-[11px]">PLA No Tóxico</span>
                         </div>
@@ -170,7 +173,45 @@
                 </div>
             </section>
 
-            <!-- BANNER ESPECIAL: TALLER DE ESTAMPADOS -->
+            <!-- BANNER ESPECIAL: MINI TOUR DE IMPRESIÓN 3D -->
+            <section id="mini-tour" class="relative rounded-2xl bg-gradient-to-r from-gray-900 via-brand-darkBg to-gray-900 border border-brand-teal/30 p-5 md:p-6 overflow-hidden">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-brand-teal/20 border border-brand-teal/40 flex items-center justify-center text-brand-teal">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Mini Tour: ¿Cómo funciona nuestra Impresión 3D?</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs pt-1">
+                        <div class="bg-brand-cardBg/80 p-4 rounded-xl border border-brand-cardBorder space-y-1.5">
+                            <span class="text-brand-teal font-bold text-xs uppercase tracking-wider block">1. Tecnología FDM</span>
+                            <h4 class="font-bold text-white text-sm">Deposición Capa a Capa</h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Creamos cada objeto desde cero fundiendo filamento y depositándolo en capas micrométricas de alta precisión con tecnología de punta Bambu Lab P1S.
+                            </p>
+                        </div>
+
+                        <div class="bg-brand-cardBg/80 p-4 rounded-xl border border-brand-cardBorder space-y-1.5">
+                            <span class="text-brand-teal font-bold text-xs uppercase tracking-wider block">2. Material Ecológico</span>
+                            <h4 class="font-bold text-white text-sm">PLA Orgánico y Seguro</h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Utilizamos plástico de origen vegetal (almidón de maíz), no tóxico, biodegradable y lavable, disponible en acabados Matte, Silk y Satinado.
+                            </p>
+                        </div>
+
+                        <div class="bg-brand-cardBg/80 p-4 rounded-xl border border-brand-cardBorder space-y-1.5">
+                            <span class="text-brand-teal font-bold text-xs uppercase tracking-wider block">3. Sin Pintura Nociva</span>
+                            <h4 class="font-bold text-white text-sm">Multicolor por Encastre</h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Las piezas se ensamblan mecánicamente con colores puros de fábrica. Esto garantiza tonos vibrantes, sin saltos de pintura ni desgaste con el tiempo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BANNER ESPECIAL: TALLER DE ESTAMPADOS Y PERSONALIZADOS -->
             <section id="taller-estampados" class="relative rounded-2xl bg-gradient-to-r from-gray-900 via-gray-900/90 to-brand-cardBg border border-brand-teal/40 p-5 md:p-6 overflow-hidden shadow-xl">
                 <div class="absolute -right-10 -top-10 w-44 h-44 bg-brand-teal/10 rounded-full blur-2xl"></div>
                 <div class="flex flex-col md:flex-row items-center justify-between gap-5 relative z-10">
@@ -180,11 +221,14 @@
                         </div>
                         <h3 class="text-xl md:text-2xl font-extrabold text-white">¿Buscas Tazas, Remeras en DTF o Merchandising?</h3>
                         <p class="text-gray-300 text-xs md:text-sm max-w-xl leading-relaxed">
-                            Contamos con taller propio de sublimación y estampados rígidos para regalos corporativos y eventos en todo Uruguay.
+                            Contamos con taller propio de sublimación y estampados rígidos para regalos corporativos, remeras, tazas y eventos en todo Uruguay.
                         </p>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                        <a href="https://wa.me/59894816771?text=Hola!%20Quiero%20consultar%20por%20los%20estampados%20y%20personalizados" target="_blank" class="whitespace-nowrap bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-5 py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2 shadow-md">
+                        <a href="https://instagram.com/blesstamp.estampas.sublimacion" target="_blank" class="whitespace-nowrap bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-brands fa-instagram text-sm"></i> Instagram Taller
+                        </a>
+                        <a href="https://wa.me/59894816771?text=Hola!%20Quiero%20consultar%20por%20los%20estampados%20y%20personalizados" target="_blank" class="whitespace-nowrap bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-4 py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2 shadow-md">
                             <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Taller
                         </a>
                     </div>
@@ -214,17 +258,17 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         
                         <!-- Producto 1 -->
-                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder p-4 flex flex-col justify-between hover:border-brand-teal/50 transition">
+                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder overflow-hidden flex flex-col justify-between hover:border-brand-teal/50 transition">
                             <div>
-                                <div class="relative bg-black/40 rounded-xl p-2 mb-3 flex justify-center items-center h-56 border border-white/5 overflow-hidden">
-                                    <a href="Pikachu%20ojos%20locos.jpg" target="_blank" class="w-full h-full flex justify-center items-center">
-                                        <img src="Pikachu%20ojos%20locos.jpg" alt="Pikachu ojos locos" onerror="this.src='https://placehold.co/400x280/181C20/00B4A2?text=Pikachu+Ojos+Locos'" class="max-w-full max-h-full object-cover rounded-lg hover:scale-105 transition cursor-pointer">
-                                    </a>
+                                <a href="Pikachu%20ojos%20locos.jpg" target="_blank" class="w-full h-64 block overflow-hidden">
+                                    <img src="Pikachu%20ojos%20locos.jpg" alt="Pikachu ojos locos" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Pikachu+Ojos+Locos'" class="w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                                </a>
+                                <div class="p-4">
+                                    <h3 class="text-white font-bold text-base">Pikachu Ojos Locos</h3>
+                                    <p class="text-gray-400 text-xs mt-1">Figura coleccionable en alta definición, impresa con múltiples colores puros de gran durabilidad.</p>
                                 </div>
-                                <h3 class="text-white font-bold text-base">Pikachu Ojos Locos</h3>
-                                <p class="text-gray-400 text-xs mt-1">Figura coleccionable en alta definición, impresa con múltiples colores puros de gran durabilidad.</p>
                             </div>
-                            <div class="mt-4 pt-3 border-t border-brand-cardBorder flex items-center justify-end">
+                            <div class="p-4 pt-0 flex items-center justify-end">
                                 <a href="https://wa.me/59894103512?text=Hola!%20Quiero%20pedir%20o%20cotizar%20Pikachu%20ojos%20locos" target="_blank" class="bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 transition">
                                     <i class="fa-brands fa-whatsapp text-sm"></i> Pedir / Cotizar
                                 </a>
@@ -232,17 +276,17 @@
                         </div>
 
                         <!-- Producto 2 -->
-                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder p-4 flex flex-col justify-between hover:border-brand-teal/50 transition">
+                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder overflow-hidden flex flex-col justify-between hover:border-brand-teal/50 transition">
                             <div>
-                                <div class="relative bg-black/40 rounded-xl p-2 mb-3 flex justify-center items-center h-56 border border-white/5 overflow-hidden">
-                                    <a href="Gato%20ojos%20locos.jpg" target="_blank" class="w-full h-full flex justify-center items-center">
-                                        <img src="Gato%20ojos%20locos.jpg" alt="Gato ojos locos" onerror="this.src='https://placehold.co/400x280/181C20/00B4A2?text=Gato+Ojos+Locos'" class="max-w-full max-h-full object-cover rounded-lg hover:scale-105 transition cursor-pointer">
-                                    </a>
+                                <a href="Gato%20ojos%20locos.jpg" target="_blank" class="w-full h-64 block overflow-hidden">
+                                    <img src="Gato%20ojos%20locos.jpg" alt="Gato ojos locos" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Gato+Ojos+Locos'" class="w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                                </a>
+                                <div class="p-4">
+                                    <h3 class="text-white font-bold text-base">Gato Ojos Locos</h3>
+                                    <p class="text-gray-400 text-xs mt-1">Simpática figura decorativa de la serie divertida con detalles impecables y acabados limpios.</p>
                                 </div>
-                                <h3 class="text-white font-bold text-base">Gato Ojos Locos</h3>
-                                <p class="text-gray-400 text-xs mt-1">Simpática figura decorativa de la serie divertida con detalles impecables y acabados limpios.</p>
                             </div>
-                            <div class="mt-4 pt-3 border-t border-brand-cardBorder flex items-center justify-end">
+                            <div class="p-4 pt-0 flex items-center justify-end">
                                 <a href="https://wa.me/59894103512?text=Hola!%20Quiero%20pedir%20o%20cotizar%20Gato%20ojos%20locos" target="_blank" class="bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 transition">
                                     <i class="fa-brands fa-whatsapp text-sm"></i> Pedir / Cotizar
                                 </a>
@@ -262,17 +306,17 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         
                         <!-- Producto 1 -->
-                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder p-4 flex flex-col justify-between hover:border-brand-teal/50 transition">
+                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder overflow-hidden flex flex-col justify-between hover:border-brand-teal/50 transition">
                             <div>
-                                <div class="relative bg-black/40 rounded-xl p-2 mb-3 flex justify-center items-center h-56 border border-white/5 overflow-hidden">
-                                    <a href="Llaveros%20egresados.jpg" target="_blank" class="w-full h-full flex justify-center items-center">
-                                        <img src="Llaveros%20egresados.jpg" alt="Llaveros egresados" onerror="this.src='https://placehold.co/400x280/181C20/00B4A2?text=Llaveros+Egresados'" class="max-w-full max-h-full object-cover rounded-lg hover:scale-105 transition cursor-pointer">
-                                    </a>
+                                <a href="Llaveros%20egresados.jpg" target="_blank" class="w-full h-64 block overflow-hidden">
+                                    <img src="Llaveros%20egresados.jpg" alt="Llaveros egresados" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Llaveros+Egresados'" class="w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                                </a>
+                                <div class="p-4">
+                                    <h3 class="text-white font-bold text-base">Llaveros para Egresados</h3>
+                                    <p class="text-gray-400 text-xs mt-1">Llaveros personalizados ideales para fin de cursos y recuerdos memorables de generación 2026.</p>
                                 </div>
-                                <h3 class="text-white font-bold text-base">Llaveros para Egresados</h3>
-                                <p class="text-gray-400 text-xs mt-1">Llaveros personalizados ideales para fin de cursos y recuerdos memorables de generación 2026.</p>
                             </div>
-                            <div class="mt-4 pt-3 border-t border-brand-cardBorder flex items-center justify-end">
+                            <div class="p-4 pt-0 flex items-center justify-end">
                                 <a href="https://wa.me/59894103512?text=Hola!%20Quiero%20pedir%20o%20cotizar%20Llaveros%20para%20egresados" target="_blank" class="bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 transition">
                                     <i class="fa-brands fa-whatsapp text-sm"></i> Pedir / Cotizar
                                 </a>
@@ -280,17 +324,17 @@
                         </div>
 
                         <!-- Producto 2 -->
-                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder p-4 flex flex-col justify-between hover:border-brand-teal/50 transition">
+                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder overflow-hidden flex flex-col justify-between hover:border-brand-teal/50 transition">
                             <div>
-                                <div class="relative bg-black/40 rounded-xl p-2 mb-3 flex justify-center items-center h-56 border border-white/5 overflow-hidden">
-                                    <a href="Llaveros%20personalizados%20con%20nombres.jpg" target="_blank" class="w-full h-full flex justify-center items-center">
-                                        <img src="Llaveros%20personalizados%20con%20nombres.jpg" alt="Llaveros personalizados con nombres" onerror="this.src='https://placehold.co/400x280/181C20/00B4A2?text=Llaveros+con+Nombres'" class="max-w-full max-h-full object-cover rounded-lg hover:scale-105 transition cursor-pointer">
-                                    </a>
+                                <a href="Llaveros%20personalizados%20con%20nombres.jpg" target="_blank" class="w-full h-64 block overflow-hidden">
+                                    <img src="Llaveros%20personalizados%20con%20nombres.jpg" alt="Llaveros personalizados con nombres" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Llaveros+con+Nombres'" class="w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                                </a>
+                                <div class="p-4">
+                                    <h3 class="text-white font-bold text-base">Llaveros Personalizados con Nombre</h3>
+                                    <p class="text-gray-400 text-xs mt-1">Diseños exclusivos con nombres en relieve, perfectos para regalos personalizados o souvenirs.</p>
                                 </div>
-                                <h3 class="text-white font-bold text-base">Llaveros Personalizados con Nombre</h3>
-                                <p class="text-gray-400 text-xs mt-1">Diseños exclusivos con nombres en relieve, perfectos para regalos personalizados o souvenirs.</p>
                             </div>
-                            <div class="mt-4 pt-3 border-t border-brand-cardBorder flex items-center justify-end">
+                            <div class="p-4 pt-0 flex items-center justify-end">
                                 <a href="https://wa.me/59894103512?text=Hola!%20Quiero%20pedir%20o%20cotizar%20Llaveros%20con%20nombres" target="_blank" class="bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 transition">
                                     <i class="fa-brands fa-whatsapp text-sm"></i> Pedir / Cotizar
                                 </a>
@@ -310,17 +354,17 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         
                         <!-- Producto 1 -->
-                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder p-4 flex flex-col justify-between hover:border-brand-teal/50 transition">
+                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder overflow-hidden flex flex-col justify-between hover:border-brand-teal/50 transition">
                             <div>
-                                <div class="relative bg-black/40 rounded-xl p-2 mb-3 flex justify-center items-center h-56 border border-white/5 overflow-hidden">
-                                    <a href="Macetas%20decorativas%203D.jpg" target="_blank" class="w-full h-full flex justify-center items-center">
-                                        <img src="Macetas%20decorativas%203D.jpg" alt="Macetas decorativas 3D" onerror="this.src='https://placehold.co/400x280/181C20/00B4A2?text=Macetas+Decorativas+3D'" class="max-w-full max-h-full object-cover rounded-lg hover:scale-105 transition cursor-pointer">
-                                    </a>
+                                <a href="Macetas%20decorativas%203D.jpg" target="_blank" class="w-full h-64 block overflow-hidden">
+                                    <img src="Macetas%20decorativas%203D.jpg" alt="Macetas decorativas 3D" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Macetas+Decorativas+3D'" class="w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                                </a>
+                                <div class="p-4">
+                                    <h3 class="text-white font-bold text-base">Macetas Decorativas 3D</h3>
+                                    <p class="text-gray-400 text-xs mt-1">Dale vida a tus espacios con diseños modernos y geométricos ideales para plantas pequeñas y suculentas.</p>
                                 </div>
-                                <h3 class="text-white font-bold text-base">Macetas Decorativas 3D</h3>
-                                <p class="text-gray-400 text-xs mt-1">Dale vida a tus espacios con diseños modernos y geométricos ideales para plantas pequeñas y suculentas.</p>
                             </div>
-                            <div class="mt-4 pt-3 border-t border-brand-cardBorder flex items-center justify-end">
+                            <div class="p-4 pt-0 flex items-center justify-end">
                                 <a href="https://wa.me/59894103512?text=Hola!%20Quiero%20pedir%20o%20cotizar%20Macetas%20decorativas%203D" target="_blank" class="bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 transition">
                                     <i class="fa-brands fa-whatsapp text-sm"></i> Pedir / Cotizar
                                 </a>
@@ -328,17 +372,17 @@
                         </div>
 
                         <!-- Producto 2 -->
-                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder p-4 flex flex-col justify-between hover:border-brand-teal/50 transition">
+                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder overflow-hidden flex flex-col justify-between hover:border-brand-teal/50 transition">
                             <div>
-                                <div class="relative bg-black/40 rounded-xl p-2 mb-3 flex justify-center items-center h-56 border border-white/5 overflow-hidden">
-                                    <a href="Organizador%20de%20entrada.jpg" target="_blank" class="w-full h-full flex justify-center items-center">
-                                        <img src="Organizador%20de%20entrada.jpg" alt="Organizador de entrada" onerror="this.src='https://placehold.co/400x280/181C20/00B4A2?text=Organizador+de+Entrada'" class="max-w-full max-h-full object-cover rounded-lg hover:scale-105 transition cursor-pointer">
-                                    </a>
+                                <a href="Organizador%20de%20entrada.jpg" target="_blank" class="w-full h-64 block overflow-hidden">
+                                    <img src="Organizador%20de%20entrada.jpg" alt="Organizador de entrada" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Organizador+de+Entrada'" class="w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                                </a>
+                                <div class="p-4">
+                                    <h3 class="text-white font-bold text-base">Organizador de Entrada</h3>
+                                    <p class="text-gray-400 text-xs mt-1">Mantén llaves, billeteras y accesorios organizados en un solo lugar con este práctico soporte funcional.</p>
                                 </div>
-                                <h3 class="text-white font-bold text-base">Organizador de Entrada</h3>
-                                <p class="text-gray-400 text-xs mt-1">Mantén llaves, billeteras y accesorios organizados en un solo lugar con este práctico soporte funcional.</p>
                             </div>
-                            <div class="mt-4 pt-3 border-t border-brand-cardBorder flex items-center justify-end">
+                            <div class="p-4 pt-0 flex items-center justify-end">
                                 <a href="https://wa.me/59894103512?text=Hola!%20Quiero%20pedir%20o%20cotizar%20Organizador%20de%20entrada" target="_blank" class="bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 transition">
                                     <i class="fa-brands fa-whatsapp text-sm"></i> Pedir / Cotizar
                                 </a>
@@ -358,17 +402,17 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         
                         <!-- Producto 1 -->
-                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder p-4 flex flex-col justify-between hover:border-brand-teal/50 transition">
+                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder overflow-hidden flex flex-col justify-between hover:border-brand-teal/50 transition">
                             <div>
-                                <div class="relative bg-black/40 rounded-xl p-2 mb-3 flex justify-center items-center h-56 border border-white/5 overflow-hidden">
-                                    <a href="%c3%81rboles%20navide%c3%b1os%20impresos%20en%203D.jpg" target="_blank" class="w-full h-full flex justify-center items-center">
-                                        <img src="%c3%81rboles%20navide%c3%b1os%20impresos%20en%203D.jpg" alt="Árboles navideños 3D" onerror="this.src='https://placehold.co/400x280/181C20/00B4A2?text=Arboles+Navidenos+3D'" class="max-w-full max-h-full object-cover rounded-lg hover:scale-105 transition cursor-pointer">
-                                    </a>
+                                <a href="%c3%81rboles%20navide%c3%b1os%20impresos%20en%203D.jpg" target="_blank" class="w-full h-64 block overflow-hidden">
+                                    <img src="%c3%81rboles%20navide%c3%b1os%20impresos%20en%203D.jpg" alt="Árboles navideños 3D" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Arboles+Navidenos+3D'" class="w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                                </a>
+                                <div class="p-4">
+                                    <h3 class="text-white font-bold text-base">Árboles Navideños Impresos en 3D</h3>
+                                    <p class="text-gray-400 text-xs mt-1">Originales adornos y árboles decorativos con texturas únicas para darle un toque especial a tus fiestas.</p>
                                 </div>
-                                <h3 class="text-white font-bold text-base">Árboles Navideños Impresos en 3D</h3>
-                                <p class="text-gray-400 text-xs mt-1">Originales adornos y árboles decorativos con texturas únicas para darle un toque especial a tus fiestas.</p>
                             </div>
-                            <div class="mt-4 pt-3 border-t border-brand-cardBorder flex items-center justify-end">
+                            <div class="p-4 pt-0 flex items-center justify-end">
                                 <a href="https://wa.me/59894103512?text=Hola!%20Quiero%20pedir%20o%20cotizar%20Arboles%20navidenos%203D" target="_blank" class="bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 transition">
                                     <i class="fa-brands fa-whatsapp text-sm"></i> Pedir / Cotizar
                                 </a>
@@ -376,17 +420,17 @@
                         </div>
 
                         <!-- Producto 2 -->
-                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder p-4 flex flex-col justify-between hover:border-brand-teal/50 transition">
+                        <div class="bg-brand-cardBg rounded-2xl border border-brand-cardBorder overflow-hidden flex flex-col justify-between hover:border-brand-teal/50 transition">
                             <div>
-                                <div class="relative bg-black/40 rounded-xl p-2 mb-3 flex justify-center items-center h-56 border border-white/5 overflow-hidden">
-                                    <a href="Arboles%20con%20nombre.jpg" target="_blank" class="w-full h-full flex justify-center items-center">
-                                        <img src="Arboles%20con%20nombre.jpg" alt="Arboles con nombre" onerror="this.src='https://placehold.co/400x280/181C20/00B4A2?text=Arboles+con+Nombre'" class="max-w-full max-h-full object-cover rounded-lg hover:scale-105 transition cursor-pointer">
-                                    </a>
+                                <a href="Arboles%20con%20nombre.jpg" target="_blank" class="w-full h-64 block overflow-hidden">
+                                    <img src="Arboles%20con%20nombre.jpg" alt="Arboles con nombre" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Arboles+con+Nombre'" class="w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                                </a>
+                                <div class="p-4">
+                                    <h3 class="text-white font-bold text-base">Árboles Navideños con Nombre</h3>
+                                    <p class="text-gray-400 text-xs mt-1">Personalizados con nombres o dedicatorias, ideales para regalar o decorar la mesa navideña.</p>
                                 </div>
-                                <h3 class="text-white font-bold text-base">Árboles Navideños con Nombre</h3>
-                                <p class="text-gray-400 text-xs mt-1">Personalizados con nombres o dedicatorias, ideales para regalar o decorar la mesa navideña.</p>
                             </div>
-                            <div class="mt-4 pt-3 border-t border-brand-cardBorder flex items-center justify-end">
+                            <div class="p-4 pt-0 flex items-center justify-end">
                                 <a href="https://wa.me/59894103512?text=Hola!%20Quiero%20pedir%20o%20cotizar%20Arboles%20con%20nombre" target="_blank" class="bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 transition">
                                     <i class="fa-brands fa-whatsapp text-sm"></i> Pedir / Cotizar
                                 </a>
@@ -398,6 +442,36 @@
 
             </section>
 
+            <!-- Preguntas Frecuentes, Envíos y Demoras -->
+            <section class="space-y-4 pt-2">
+                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-circle-question text-brand-teal"></i>
+                    Información de Pedidos, Tiempos y Envíos
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                    <div class="bg-brand-darkBg p-4 rounded-xl border border-brand-cardBorder space-y-1">
+                        <h4 class="font-bold text-white text-sm">⏱️ Tiempos de Fabricación</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            El proceso de impresión y ensamble toma de <strong>3 a 5 días hábiles</strong> según la complejidad del pedido antes del despacho.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-darkBg p-4 rounded-xl border border-brand-cardBorder space-y-1">
+                        <h4 class="font-bold text-white text-sm">💳 Medios de Pago</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            Aceptamos <strong>transferencias bancarias</strong> y redes de cobranza (Abitab / Redpagos). Se solicita seña para iniciar producción.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-darkBg p-4 rounded-xl border border-brand-cardBorder space-y-1">
+                        <h4 class="font-bold text-white text-sm">📦 Envíos a todo Uruguay</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            Despachamos por <strong>DAC</strong> o la agencia de tu preferencia a todo el territorio con flete a pagar en destino.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
         </div>
 
         <!-- Footer -->
@@ -406,12 +480,15 @@
                 <strong class="text-brand-teal font-extrabold text-sm">BLESSTAMP 3D</strong>
                 <p class="text-gray-400 mt-0.5">© 2026 Impresión 3D & Estampados Personalizados - Uruguay</p>
             </div>
-            <div class="flex items-center gap-3">
-                <a href="https://wa.me/59894103512" target="_blank" class="bg-brand-cardBg hover:bg-gray-800 text-gray-300 border border-brand-cardBorder px-3 py-1.5 rounded-lg text-xs font-semibold transition">
-                    WhatsApp 3D
+            <div class="flex items-center gap-3 flex-wrap">
+                <a href="https://instagram.com/blesstamp.estampas.sublimacion" target="_blank" class="bg-brand-cardBg hover:bg-gray-800 text-gray-300 border border-brand-cardBorder px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5">
+                    <i class="fa-brands fa-instagram text-pink-500"></i> Instagram Taller
                 </a>
-                <a href="https://wa.me/59894816771" target="_blank" class="bg-brand-cardBg hover:bg-gray-800 text-gray-300 border border-brand-cardBorder px-3 py-1.5 rounded-lg text-xs font-semibold transition">
-                    WhatsApp Taller
+                <a href="https://wa.me/59894103512" target="_blank" class="bg-brand-cardBg hover:bg-gray-800 text-gray-300 border border-brand-cardBorder px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5">
+                    <i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp 3D
+                </a>
+                <a href="https://wa.me/59894816771" target="_blank" class="bg-brand-cardBg hover:bg-gray-800 text-gray-300 border border-brand-cardBorder px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5">
+                    <i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp Taller
                 </a>
             </div>
         </footer>
