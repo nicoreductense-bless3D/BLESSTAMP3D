@@ -88,13 +88,6 @@
             
             <!-- Actions & Status Badge -->
             <div class="flex items-center gap-3 flex-wrap">
-                <!-- Mini Timelapse en Cabecera -->
-                <div class="w-16 h-9 rounded-lg overflow-hidden border border-brand-teal/40 shadow-md bg-black flex items-center justify-center" title="Bambu Lab P1S imprimiendo">
-                    <video autoplay muted loop playsinline class="w-full h-full object-cover">
-                        <source src="timelapse.mp4" type="video/mp4">
-                    </video>
-                </div>
-
                 <a href="#mini-tour" class="hidden sm:flex items-center gap-1.5 bg-brand-cardBg hover:bg-gray-800 text-brand-teal border border-brand-teal/30 px-3 py-1.5 rounded-xl text-xs font-semibold transition">
                     <i class="fa-solid fa-graduation-cap"></i> Tour 3D
                 </a>
@@ -114,21 +107,21 @@
 
         <div class="p-5 md:p-8 space-y-10">
 
-            <!-- Hero Section: Kit Sensorial -->
+            <!-- Hero Section: Kit Sensorial con Slider Automático -->
             <section class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
                 <div class="space-y-4">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-teal/10 border border-brand-teal/30 text-brand-teal text-xs font-semibold">
                         <span class="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
-                        🔥 PRODUCTO DESTACADO
+                        🔥 PRODUCTO DESTACADO & NOVEDADES
                     </div>
                     <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight">
-                        Kit de Cocina Sensorial <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal via-emerald-400 to-amber-400">Didáctico en 3D</span>
+                        Kit de Cocina Sensorial <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal via-emerald-400 to-amber-400">& Catálogo Destacado</span>
                     </h2>
                     <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
                         Diseñado para el desarrollo motor y el juego libre. Piezas 100% lavables, ultra resistentes y producidas en colores puros de alta precisión sin pinturas nocivas.
                     </p>
                     <div class="pt-2 flex flex-wrap gap-3">
-                        <a href="https://wa.me/59894103512?text=Hola!%20Quiero%20pedir%20o%20cotizar%20el%20Kit%20de%20Cocina%20Sensorial" target="_blank" class="bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-5 py-2.5 rounded-xl transition text-xs sm:text-sm shadow-md shadow-brand-teal/20 flex items-center gap-2">
+                        <a href="https://wa.me/59894103512?text=Hola!%20Quiero%20pedir%20o%20cotizar%20productos%20destacados" target="_blank" class="bg-brand-teal hover:bg-brand-tealHover text-gray-950 font-bold px-5 py-2.5 rounded-xl transition text-xs sm:text-sm shadow-md shadow-brand-teal/20 flex items-center gap-2">
                             <i class="fa-brands fa-whatsapp text-sm"></i> Pedir / Cotizar
                         </a>
                         <a href="#catalogo" class="bg-gray-800 hover:bg-gray-700 text-white font-medium px-4 py-2.5 rounded-xl border border-gray-700 transition text-xs sm:text-sm">
@@ -137,17 +130,62 @@
                     </div>
                 </div>
 
-                <!-- Right Column Image -->
+                <!-- Right Column Slider (Slider de Imágenes Destacadas) -->
                 <div class="relative group flex justify-center">
                     <div class="absolute -inset-1 bg-gradient-to-r from-brand-teal via-emerald-500 to-amber-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-500"></div>
-                    <div class="relative w-full rounded-2xl bg-black/40 border border-brand-cardBorder overflow-hidden flex flex-col items-center">
-                        <a href="Kit%20sensorial.jpg" target="_blank" class="w-full overflow-hidden">
-                            <img src="Kit%20sensorial.jpg" alt="Kit Sensorial Didáctico" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Kit+Sensorial'" class="w-full h-64 sm:h-72 object-cover transform group-hover:scale-105 transition duration-500">
-                        </a>
-                        <div class="w-full p-3 bg-brand-darkBg/90 flex justify-between items-center text-xs text-gray-400 border-t border-brand-cardBorder">
-                            <span class="font-medium text-gray-300"><i class="fa-solid fa-child text-brand-teal mr-1"></i> Estimulación Temprana</span>
-                            <span class="bg-brand-cardBg text-gray-300 px-2 py-0.5 rounded border border-gray-700 text-[11px]">PLA No Tóxico</span>
+                    <div class="relative w-full rounded-2xl bg-black/40 border border-brand-cardBorder overflow-hidden flex flex-col items-center shadow-2xl">
+                        
+                        <!-- Contenedor de Diapositivas -->
+                        <div id="destacados-slider" class="w-full h-64 sm:h-72 relative overflow-hidden">
+                            
+                            <!-- Slide 1: Kit Sensorial -->
+                            <div class="slider-item absolute inset-0 transition-opacity duration-700 opacity-100 flex items-center justify-center">
+                                <a href="Kit%20sensorial.jpg" target="_blank" class="w-full h-full block">
+                                    <img src="Kit%20sensorial.jpg" alt="Kit Sensorial Didáctico" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Kit+Sensorial'" class="w-full h-full object-cover">
+                                </a>
+                            </div>
+
+                            <!-- Slide 2: Lámpara Decorativa 3D -->
+                            <div class="slider-item absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                                <a href="Lampara%20decorativa%203D.jpg" target="_blank" class="w-full h-full block">
+                                    <img src="Lampara%20decorativa%203D.jpg" alt="Lámpara Decorativa 3D" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Lampara+Decorativa'" class="w-full h-full object-cover">
+                                </a>
+                            </div>
+
+                            <!-- Slide 3: Pikachu Ojos Locos -->
+                            <div class="slider-item absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                                <a href="Pikachu%20ojos%20locos.jpg" alt="Pikachu Ojos Locos" target="_blank" class="w-full h-full block">
+                                    <img src="Pikachu%20ojos%20locos.jpg" alt="Pikachu Ojos Locos" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Pikachu+Ojos+Locos'" class="w-full h-full object-cover">
+                                </a>
+                            </div>
+
+                            <!-- Slide 4: Árboles Navideños con Nombre -->
+                            <div class="slider-item absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                                <a href="arboles_con_nombre.jpg" target="_blank" class="w-full h-full block">
+                                    <img src="arboles_con_nombre.jpg" alt="Árboles Navideños con Nombre" onerror="this.src='https://placehold.co/600x400/181C20/00B4A2?text=Arboles+Navidenos'" class="w-full h-full object-cover">
+                                </a>
+                            </div>
+
+                            <!-- Botones Prev / Next superpuestos -->
+                            <button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center transition border border-white/20 z-20">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-brand-teal text-white w-8 h-8 rounded-full flex items-center justify-center transition border border-white/20 z-20">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
                         </div>
+
+                        <!-- Barra Inferior Dinámica con la etiqueta correcta por producto -->
+                        <div class="w-full p-3 bg-brand-darkBg/95 flex justify-between items-center text-xs text-gray-300 border-t border-brand-cardBorder z-10">
+                            <span id="slider-label" class="font-semibold flex items-center gap-1.5 truncate">
+                                <i class="fa-solid fa-star text-brand-teal"></i> Kit Sensorial Didáctico
+                            </span>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span class="w-2 h-2 rounded-full bg-brand-teal animate-ping"></span>
+                                <span id="slider-tag" class="bg-brand-cardBg text-brand-teal px-2 py-0.5 rounded border border-brand-teal/30 text-[11px] font-bold">Estimulación Temprana</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -179,7 +217,7 @@
                 </div>
             </section>
 
-            <!-- BANNER ESPECIAL: MINI TOUR DE IMPRESIÓN 3D (RESTAURADO CON TIMELAPSE VISIBLE) -->
+            <!-- BANNER ESPECIAL: MINI TOUR DE IMPRESIÓN 3D (TIMELAPSE A LA MITAD DE TAMAÑO) -->
             <section id="mini-tour" class="relative rounded-2xl bg-gradient-to-r from-gray-900 via-brand-darkBg to-gray-900 border border-brand-teal/30 p-5 md:p-6 overflow-hidden shadow-xl">
                 <div class="space-y-4">
                     <div class="flex items-center justify-between flex-wrap gap-2">
@@ -194,18 +232,18 @@
                         </span>
                     </div>
 
-                    <!-- Video Timelapse Destacado en el Tour -->
-                    <div class="w-full h-56 sm:h-72 rounded-xl overflow-hidden border border-brand-teal/40 bg-black shadow-lg relative">
+                    <!-- Video Timelapse Reducido a la Mitad de Altura -->
+                    <div class="w-full h-32 sm:h-40 rounded-xl overflow-hidden border border-brand-teal/40 bg-black shadow-lg relative">
                         <video autoplay muted loop playsinline class="w-full h-full object-cover">
                             <source src="timelapse.mp4" type="video/mp4">
                             Tu navegador no soporta video.
                         </video>
-                        <div class="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg border border-brand-teal/30 text-xs text-gray-200 flex items-center gap-2">
+                        <div class="absolute bottom-2 left-2 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-lg border border-brand-teal/30 text-[11px] text-gray-200 flex items-center gap-2">
                             <span class="relative flex h-2 w-2">
                               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-teal opacity-75"></span>
                               <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-teal"></span>
                             </span>
-                            <span>Proceso de impresión activo en Bambu Lab P1S</span>
+                            <span>Bambu Lab P1S Imprimiendo</span>
                         </div>
                     </div>
                     
@@ -289,7 +327,7 @@
                 </div>
             </section>
 
-            <!-- BANNER ESPECIAL: TALLER DE ESTAMPADOS Y PERSONALIZADOS (MÁS LLAMATIVO Y COLORIDO) -->
+            <!-- BANNER ESPECIAL: TALLER DE ESTAMPADOS Y PERSONALIZADOS -->
             <section id="taller-estampados" class="relative rounded-2xl bg-gradient-to-br from-purple-900/90 via-brand-darkBg to-pink-900/90 border-2 border-pink-500/60 p-6 md:p-8 overflow-hidden shadow-2xl shadow-purple-900/30">
                 <div class="absolute -right-12 -bottom-12 w-56 h-56 bg-pink-500/20 rounded-full blur-3xl"></div>
                 <div class="absolute -left-12 -top-12 w-56 h-56 bg-purple-500/20 rounded-full blur-3xl"></div>
@@ -577,5 +615,61 @@
 
         </div>
     </main>
+
+    <!-- Script del Slider Automático para el Producto Destacado -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider-item');
+        const sliderLabel = document.getElementById('slider-label');
+        const sliderTag = document.getElementById('slider-tag');
+
+        // Datos específicos de cada diapositiva (Título y Etiqueta sin mezclar estimulación temprana)
+        const slideData = [
+            { title: "Kit Sensorial Didáctico", tag: "Estimulación Temprana", icon: "fa-star" },
+            { title: "Lámpara Decorativa 3D", tag: "Iluminación Moderna", icon: "fa-lightbulb" },
+            { title: "Pikachu Ojos Locos", tag: "Figura Coleccionable", icon: "fa-robot" },
+            { title: "Árboles Navideños con Nombre", tag: "Personalizado 2026", icon: "fa-snowflake" }
+        ];
+
+        function updateSlider() {
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.remove('opacity-0');
+                    slide.classList.add('opacity-100');
+                } else {
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0');
+                }
+            });
+
+            // Actualizar textos y etiquetas inferiores de forma limpia
+            if (slideData[currentSlide]) {
+                sliderLabel.innerHTML = `<i class="fa-solid ${slideData[currentSlide].icon} text-brand-teal"></i> ${slideData[currentSlide].title}`;
+                sliderTag.textContent = slideData[currentSlide].tag;
+            }
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+
+        // Auto-avance cada 3.5 segundos
+        let slideInterval = setInterval(nextSlide, 3500);
+
+        // Pausar al pasar el mouse por encima del slider
+        const sliderContainer = document.getElementById('destacados-slider');
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+            sliderContainer.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 3500);
+            });
+        }
+    </script>
 </body>
 </html>
